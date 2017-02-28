@@ -1,15 +1,18 @@
 //Redo the "max and min (without sort or Math.max/min)" drill but this time use a while loop instead of a for loop
 function max(numbers) {
  countTo = numbers.length;
-  var num = numbers[0];
+  console.log(countTo);
+  let num = numbers[0];
   if (num === null || num === undefined) {
     return null;
   }
   else {
-    for (var i= 1; i<=countTo; i++) {
-      if (numbers[i] > num){
-      num = numbers[i];
+    let counter = 1;
+    while (counter <= countTo) {
+      if (numbers[counter] > num){
+      num = numbers[counter];
       }
+      counter++;
     }
     return num;
   }
@@ -19,15 +22,17 @@ function max(numbers) {
 
 function min(numbers) {
   countTo = numbers.length;
-  var num = numbers[0];
+  let num = numbers[0];
   if (num === null || num === undefined) {
     return null;
   }
   else {
-    for (var i= 1; i<=countTo; i++) {
-      if (numbers[i] < num){
-      num = numbers[i];
+    let counter = 1;
+    while (counter <= countTo) {
+      if (numbers[counter] < num){
+      num = numbers[counter];
       }
+      counter++;
     }
     return num;
   }
