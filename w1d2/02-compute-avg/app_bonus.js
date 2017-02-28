@@ -1,17 +1,14 @@
-//Redo "Compute the average" exercise but this use a while loop instead of a for loop
 //BONUS Tasks: Try the Array.forEach() method.
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 
 function average(numbers) {
   var count = numbers.length;
-  var totalnum = numbers[0];
-  let i = 1;
-  while (i<count) {
-    totalnum = totalnum+numbers[i];
-    i++;
-  }
-  return totalnum/count;
+  let sumOf = 0;
+  numbers.forEach(function(n){
+    sumOf=sumOf+n;
+  });
+  return sumOf/count;
 }
 
 
