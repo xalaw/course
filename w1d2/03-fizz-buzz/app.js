@@ -1,29 +1,25 @@
 //Redo the "Fizz Buzz" drill" if you used if/else last time, then try switch statement this time.
 
-
-
 function fizzBuzz(countTo) {
   var myArray = [];
   for(i=1; i<=countTo; i++) {
-    if(i%3 === 0 && i%5 === 0) {
+    switch (true) {
+      case (i%3===0 && i%5===0):
       myArray.push('fizzbuzz');
-    }
-    else if(i%5 === 0) {
+      break;
+      case (i%5===0):
       myArray.push('buzz');
-    }
-    else if(i%3 === 0) {
-    myArray.push('fizz');
-    }
-    else {
+      break;
+      case (i%3===0):
+      myArray.push('fizz');
+      break;
+      default:
       myArray.push(i);
     }
-
   }
   console.log(myArray);
   return myArray;
 }
-
-
 
 
 /* From here down, you are not expected to
